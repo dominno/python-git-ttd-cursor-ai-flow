@@ -17,4 +17,9 @@
   - Created tests for different character set configurations
   - Enhanced generator to support configurable character sets
   - Ensured backward compatibility with basic generation tests
+  - Achieved 100% test coverage for this feature
+- Implemented and tested Feature 3: Exclude Ambiguous Characters
+  - Created tests for ambiguous character exclusion
+  - Defined ambiguous characters for each character category
+  - Enhanced generator to support excluding ambiguous characters
   - Achieved 100% test coverage for this feature 
