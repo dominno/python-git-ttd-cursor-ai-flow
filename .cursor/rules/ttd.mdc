@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+description: Automate Git Flow with TDD
+globs: *.py
+---
+# Workflow for Feature Implementation
+- Start by creating a new branch for the feature.
+- Write failing tests before implementing any functionality.
+- Generate minimal code to pass the tests.
+- Commit changes after passing tests.
+- Refactor code only after all tests pass.
+- Run all tests before merging the branch into `develop`.
+- Revert branch if any test fails during CI or manual testing.
+- Merge only if all tests pass.
+
+# Automated Prompts:
+1. "Create a new branch for {feature_name}."
+2. "Write a failing test for {feature_name}."
+3. "Generate code to pass the test."
+4. "Commit changes after passing tests."
+5. "Run all tests and ensure they pass."
+6. "Merge branch into `develop` if all tests pass."
+7. "Revert branch if any test fails."
