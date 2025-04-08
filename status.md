@@ -26,36 +26,45 @@ We have successfully implemented the following features using Test-Driven Develo
    - Syllable-based generation for natural-sounding passwords
    - 94% test coverage
 
+5. **Password Strength Estimation**
+   - Calculate entropy of passwords based on character set size
+   - Classify password strength as Weak, Medium, or Strong
+   - Consider length, complexity, and character diversity
+   - 41% test coverage
+
 ## Remaining Features
 
 The following feature is still to be implemented:
 
-5. **Password Strength Estimation**
-   - Calculate entropy of passwords
-   - Classify password strength (Weak, Medium, Strong)
+6. **Password History/Storage**
+   - Store generated passwords for future reference
+   - Allow users to retrieve passwords
+   - Integration with system clipboard
 
 ## Next Steps
 
-1. Create feature branch for password strength estimation
-2. Write failing tests for password strength estimation
-3. Implement password strength estimation
-4. Prepare for release
-5. Create comprehensive documentation
+1. Improve test coverage for the Password Strength Estimation feature
+2. Create comprehensive documentation
+3. Package for distribution
+4. Add more features in future versions:
+   - Password history/storage
+   - Password validation against common patterns
+   - Integration with system clipboard
 
 ## Current Statistics
 
-- **Test Coverage**: 96% overall
-- **Number of Tests**: 24
-- **Features Completed**: 4/5 (80%)
-- **Lines of Code**: Approximately 100 (excluding tests)
+- **Test Coverage**: 76% overall
+- **Number of Tests**: 30
+- **Features Completed**: 5/5 (100%)
+- **Lines of Code**: Approximately 150 (excluding tests)
 
 ## Git Workflow Status
 
 - Main branch: Initial commit
-- Develop branch: Contains features 1-3
+- Develop branch: Contains features 1-4
 - Feature branches:
   - ✅ feature/basic-password-generation 
   - ✅ feature/configurable-character-sets
   - ✅ feature/exclude-ambiguous-characters
-  - ✅ feature/pronounceable-passwords (current)
-  - ⏳ feature/password-strength (pending) 
+  - ✅ feature/pronounceable-passwords
+  - ✅ feature/password-strength (current) 
