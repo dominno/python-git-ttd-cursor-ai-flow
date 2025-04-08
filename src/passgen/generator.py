@@ -7,12 +7,20 @@ import string
 from typing import Optional
 
 
+# Define ambiguous characters
+AMBIGUOUS_UPPERCASE = "OI"
+AMBIGUOUS_LOWERCASE = "l"
+AMBIGUOUS_DIGITS = "01"
+AMBIGUOUS_SYMBOLS = "|`'\",;:~-_=+()[]{}<>"
+
+
 def generate(
     length: int = 12,
     uppercase: bool = True,
     lowercase: bool = True,
     digits: bool = True,
-    symbols: bool = True
+    symbols: bool = True,
+    exclude_ambiguous: bool = False
 ) -> str:
     """
     Generate a random password with configurable character sets.
@@ -24,6 +32,8 @@ def generate(
         lowercase (bool, optional): Include lowercase letters. Defaults to True.
         digits (bool, optional): Include digits. Defaults to True.
         symbols (bool, optional): Include symbols. Defaults to True.
+        exclude_ambiguous (bool, optional): Exclude ambiguous characters like
+            '0', 'O', '1', 'l', 'I', etc. Defaults to False.
     
     Returns:
         str: The generated password.
@@ -40,14 +50,30 @@ def generate(
     
     # Build character set based on configuration
     chars = ""
+    
     if uppercase:
-        chars += string.ascii_uppercase
+        if exclude_ambiguous:
+            chars += ''.join(c for c in string.ascii_uppercase if c not in AMBIGUOUS_UPPERCASE)
+        else:
+            chars += string.ascii_uppercase
+    
     if lowercase:
-        chars += string.ascii_lowercase
+        if exclude_ambiguous:
+            chars += ''.join(c for c in string.ascii_lowercase if c not in AMBIGUOUS_LOWERCASE)
+        else:
+            chars += string.ascii_lowercase
+    
     if digits:
-        chars += string.digits
+        if exclude_ambiguous:
+            chars += ''.join(c for c in string.digits if c not in AMBIGUOUS_DIGITS)
+        else:
+            chars += string.digits
+    
     if symbols:
-        chars += string.punctuation
+        if exclude_ambiguous:
+            chars += ''.join(c for c in string.punctuation if c not in AMBIGUOUS_SYMBOLS)
+        else:
+            chars += string.punctuation
     
     # Ensure at least one character set is selected
     if not chars:
