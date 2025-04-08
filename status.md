@@ -20,13 +20,15 @@ We have successfully implemented the following features using Test-Driven Develo
    - Customized filtering for each character category
    - 100% test coverage
 
-## Remaining Features
-
-The following features are still to be implemented:
-
 4. **Pronounceable Passwords**
    - Generate readable passwords by combining syllables
-   - Configurable options for pronounceability
+   - Support for including digits, symbols, and capitalization
+   - Syllable-based generation for natural-sounding passwords
+   - 94% test coverage
+
+## Remaining Features
+
+The following feature is still to be implemented:
 
 5. **Password Strength Estimation**
    - Calculate entropy of passwords
@@ -34,29 +36,26 @@ The following features are still to be implemented:
 
 ## Next Steps
 
-1. Create feature branch for pronounceable passwords
-2. Write failing tests for pronounceable password generation
-3. Implement pronounceable password generation
-4. Create feature branch for password strength estimation
-5. Write failing tests for password strength estimation
-6. Implement password strength estimation
-7. Prepare for release
-8. Create comprehensive documentation
+1. Create feature branch for password strength estimation
+2. Write failing tests for password strength estimation
+3. Implement password strength estimation
+4. Prepare for release
+5. Create comprehensive documentation
 
 ## Current Statistics
 
-- **Test Coverage**: 100%
-- **Number of Tests**: 15
-- **Features Completed**: 3/5 (60%)
-- **Lines of Code**: Approximately 35 (excluding tests)
+- **Test Coverage**: 96% overall
+- **Number of Tests**: 24
+- **Features Completed**: 4/5 (80%)
+- **Lines of Code**: Approximately 100 (excluding tests)
 
 ## Git Workflow Status
 
 - Main branch: Initial commit
-- Develop branch: Contains all 3 implemented features
+- Develop branch: Contains features 1-3
 - Feature branches:
   - ✅ feature/basic-password-generation 
   - ✅ feature/configurable-character-sets
   - ✅ feature/exclude-ambiguous-characters
-  - ⏳ feature/pronounceable-passwords (pending)
+  - ✅ feature/pronounceable-passwords (current)
   - ⏳ feature/password-strength (pending) 
