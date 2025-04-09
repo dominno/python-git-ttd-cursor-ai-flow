@@ -93,19 +93,6 @@ For each feature, we'll follow this TDD workflow:
 4. When all features are complete, create a release branch
 5. After testing the release, merge into `main` and tag as v1.0.0
 
-## Implementation Timeline
-
-| Feature | Estimated Time |
-|---------|----------------|
-| Project Setup | 1 day |
-| Basic Password Generation | 2 days |
-| Configurable Character Sets | 2 days |
-| Exclude Ambiguous Characters | 1 day |
-| Pronounceable Passwords | 3 days |
-| Password Strength Estimation | 2 days |
-| Documentation | 2 days |
-| Final Testing and Release | 1 day |
-
 ## Testing Strategy
 
 - Unit tests for all components and functions
